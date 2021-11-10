@@ -4,8 +4,8 @@ var vpratoselecionado;
 var prato;
 
 function menu() {
-    
-    
+
+
     console.clear();
 
     console.log('1. Pipoca \n2. Macarrão\n3. Carne\n4. Feijão\n5. Brigadeiro');
@@ -28,7 +28,6 @@ function menu() {
 }
 
 function tempopadrao(vmenu) {
-    
 
     switch (vmenu) {
         case '1':
@@ -51,7 +50,6 @@ function tempopadrao(vmenu) {
 }
 
 function pratoselecionado(vprato) {
-  
 
     switch (vprato) {
         case '1':
@@ -96,10 +94,9 @@ function temposelecionado() {
         else {
             executaprocessso(temposelecionado);
         }
-    } else{
+    } else {
         console.log('Comando não programado')
     }
-
 }
 
 function executaprocessso(vtempocozimento) {
@@ -107,24 +104,18 @@ function executaprocessso(vtempocozimento) {
     console.log(`Iniciando cozimento do seu prato de ${vpratoselecionado}`);
 
     setTimeout(function () {
-        console.log('Prato pronto, bom apetite!!!'); 
+        console.log('Prato pronto, bom apetite!!!');
 
         let executanovamente = prompt('\n Deseja cozinhar outro prato (S/N)?');
 
-        if(executanovamente.toUpperCase() =='S')
-        {
-    menu();
+        if (executanovamente.toUpperCase() == 'S') {
+            menu();
         }
-        else
-        {
+        else {
             console.clear();
             console.log('Desligando o microondas');
         }
-
-    }, vtempocozimento*1000)
-    
-   
+    }, vtempocozimento * 1000)
 }
 
 menu();
-
